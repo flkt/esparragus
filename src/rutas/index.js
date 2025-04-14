@@ -6,13 +6,24 @@ const rutas = createRouter({
   routes: [
     {
       path: '/',
-      name: 'bienvenida',
+      name: 'Bienvenida',
       component: Bienvenida,
     },
     {
       path: '/componentes',
-      name: 'componentes',
       component: () => import('../vistas/VistaComponentes.vue'),
+      children: [
+        {
+          path: '',
+          name: 'Componentes',
+          component: () => import('../vistas/componentes/SubvistaComponentes.vue'),
+        },
+        {
+          path: 'esparragus-base',
+          name: 'Esparragus Base',
+          component: () => import('../vistas/componentes/EsparragusBase.vue'),
+        },
+      ]
     },
   ],
 })
