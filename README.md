@@ -1,41 +1,66 @@
 # esparragus
 
-This template should help get you started developing with Vue 3 in Vite.
+generador de sistemas de diseño 
 
-## Recommended IDE Setup
+## uso
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+### descarga
 
 ```sh
+git clone git@github.com:flkt/esparragus.git
+```
+
+### instala
+
+```sh
+cd esparragus
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### levanta la documentacion
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### cambia de rama para que no sobreescribas el original
+
+```sh
+git checkout -b otro-proyecto
+```
+
+### configura los estilos
+
+. . . 
+
+### configura el listado de los componentes que necesitas
+
+. . .
+
+### compila tu sistema de diseño
 
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### obten el enlace
 
 ```sh
-npm run test:unit
+npm link
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### ve a la carpeta de tu otro-proyecto
 
 ```sh
-npm run lint
+cd ../otro-proyecto
 ```
+
+### utilizalo en otro-proyecto
+
+```sh
+npm link esparragus
+```
+
+## 
+
+ 	( . .)φ__  flkt.crnpio@gmail.com

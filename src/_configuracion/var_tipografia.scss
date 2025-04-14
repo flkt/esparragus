@@ -1,0 +1,14 @@
+// en css solo las variables que se pueden editar en vivo para modificar la accesibilidad
+:root {
+  --es-texto-familia: sans-serif;
+  --es-texto-tamanio: 18px;
+  --es-titulo-familia: sans-serif;
+  --es-codigo-familia: monospace;
+}
+
+// en sass las variables que necesitamos fijas en el proyecto pa que no queden ahi a merced de quien sabe quienes
+$texto-tamanio-min: 14px;
+$texto-tamanio-max: 48px;
+$texto-interlineado: 1.25em;
+$texto-ancho-lectura: 700px;
+$titulo-interlineado: 1em;
