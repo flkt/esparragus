@@ -1,9 +1,11 @@
 {
   "name": "esparragus",
   "description": "proyecto en memoria de esparragus el mejor y mas bonito mister mr chaparrito el el el el perrito",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/esparragus.umd.cjs",
   "module": "./dist/esparragus.js",
   "exports": {
@@ -33,7 +35,7 @@
     "vite": "^6.2.1",
     "vite-plugin-vue-devtools": "^7.7.2"
   },
-    "author": {
+  "author": {
     "name": "flkt",
     "url": "https://flkt.mx/"
   },
