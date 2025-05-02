@@ -5,17 +5,9 @@
     </h1>
 
     <p>
-      Esparragus es en si un sistema de diseño
-      que se puede utilizar tal cual se me ocurrió
-      instalando el proyecto como dependencia
-      y utlizando sus componentes.
+      Esparragus es un sistema de diseño orientado en la creación de portafolios
+      para artistas de la industria del cine, animación y videojuegos.
     </p>
 
-    <p>
-      Pero tambien es un generador de sistemas de diseño
-      que puedes desargar, configurar y utilizar local.
-      Creando ramas por cada sistema de diseño que necesites
-      puedes almacenar tantos como quepan en tu computadora.
-    </p>
   </main>
 </template>

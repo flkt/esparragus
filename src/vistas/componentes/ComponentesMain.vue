@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <main class="contenedor">
-    <h1>Componentes, vista de listas</h1>
+    <h1>Componentes</h1>
 
     <ul>
       <li>
