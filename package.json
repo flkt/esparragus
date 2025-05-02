@@ -17,7 +17,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build-componentes": "vite build",
+    "build-estilos": "sass src/esparragus.scss:dist/esparragus.css --style compressed",
+    "build": "npm run build-componentes; npm run build-estilos",
     "preview": "vite preview",
     "lint": "eslint . --fix"
   },
