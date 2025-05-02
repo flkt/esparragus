@@ -1,11 +1,5 @@
-<template>
-  <esparragus-base />
-</template>
-
-<style lang="scss">
-@charset 'UTF-8';
 @use 'sass:map';
-@use '@/_configuracion/var_tipografia' as variable;
+@use '../_configuracion/var_tipografia' as config;
 
 *,
 *::before,
@@ -14,14 +8,14 @@
 }
 
 html {
-  font-size: clamp(variable.$texto-tamanio-min, var(--es-texto-tamanio, 18px), variable.$texto-tamanio-max);
+  font-size: clamp(config.$texto-tamanio-min, var(--es-texto-tamanio, 18px), config.$texto-tamanio-max);
   font-family: var(--es-texto-familia, sans-serif), sans-serif;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
 }
 
 body {
-  line-height: variable.$texto-interlineado;
+  line-height: config.$texto-interlineado;
   margin: 0;
   scroll-behavior: smooth;
 }
@@ -34,7 +28,7 @@ h5,
 h6,
 caption {
   font-family: var(--es-titulo-familia, sans-serif), sans-serif;
-  line-height: variable.$titulo-interlineado;
+  line-height: config.$titulo-interlineado;
 }
 
 h1,
@@ -48,7 +42,7 @@ blockquote,
 figcaption,
 details,
 caption {
-  max-width: variable.$texto-ancho-lectura;
+  max-width: config.$texto-ancho-lectura;
 }
 
 hgroup {
@@ -67,16 +61,16 @@ samp,
 kbd,
 var {
   font-family: var(--es-codigo-familia, monospace), monospace;
-  font-size: max(0.9em, variable.$texto-tamanio-min);
+  font-size: max(0.9em, config.$texto-tamanio-min);
 }
 
 small {
-  font-size: max(0.85em, variable.$texto-tamanio-min);
+  font-size: max(0.85em, config.$texto-tamanio-min);
 }
 
 sub,
 sup {
-  font-size: max(0.75em, variable.$texto-tamanio-min);
+  font-size: max(0.75em, config.$texto-tamanio-min);
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -99,7 +93,7 @@ figure,
 picture,
 img,
 [disabled] {
-  cursor: cell;
+  cursor: crosshair;
   pointer-events: none;
 }
 
@@ -128,5 +122,3 @@ input[type='reset'],
 ::file-selector-button {
   cursor: pointer;
 }
-
-</style>

@@ -1,0 +1,20 @@
+// nombre dispositivo: ancho mínimo en pixeles
+$dispositivos: (
+  'cel': 320px,
+  'lap': 768px,
+  'esc': 1366px,
+  'fhd': 1920px,
+  'qhd': 2560px,
+  'wqhd': 3440px,
+  'uhd': 3840px,
+);
+
+// nombre dispositivo: espaciado base en pixeles
+$espaciado: (   //1
+  'cel': 16px,  //2
+  'lap': 24px,  //3
+  'esc': 40px,  //5
+  'fhd': 64px,  //8
+  'qhd': 104px, //13
+                // na mas saque esos numeros por jugar
+);

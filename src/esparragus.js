@@ -1,4 +1,4 @@
-import * as componentes from '@/_configuracion/arr_componentes.js';
+import * as componentes from './componentes/index.js';
 
 const listaComponentes = componentes?.default;
 const esparragus = {

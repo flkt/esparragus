@@ -1,0 +1,23 @@
+@use 'sass:map';
+@use './var_adaptable.scss' as adaptable;
+
+// tipografia
+:root {
+  --es-texto-familia: sans-serif;
+  --es-texto-tamanio: 18px;
+  --es-titulo-familia: sans-serif;
+  --es-codigo-familia: monospace;
+}
+
+// espaciado adaptable
+:root {
+  --es-espaciado-base: 8px;
+}
+
+@each $dispositivo, $tamanio in adaptable.$espaciado {
+  @media screen and (min-width: map.get(adaptable.$dispositivos, $dispositivo)) {
+    :root {
+      --es-espaciado-base: #{$tamanio};
+    }
+  }
+}

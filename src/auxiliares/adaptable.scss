@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use '../_configuracion/var_adaptable' as config;
+
+@mixin para-dispositivo($desde, $hasta: 9999px) {
+  @media screen and (min-width: map.get(config.$dispositivos, #{$desde})) and (max-width: calc(map.get(config.$dispositivos, #{$hasta}) - 1px)) {
+    @content;
+  }
+}
+
+@mixin desde-dispositivo($desde) {
+  @media screen and (min-width: map.get(config.$dispositivos, #{$desde})) {
+    @content;
+  }
+}

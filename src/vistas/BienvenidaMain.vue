@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="contenedor">
     <h1>
       Esparragus
     </h1>
@@ -17,6 +17,5 @@
       Creando ramas por cada sistema de diseño que necesites
       puedes almacenar tantos como quepan en tu computadora.
     </p>
-
   </main>
 </template>
