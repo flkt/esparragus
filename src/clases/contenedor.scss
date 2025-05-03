@@ -5,6 +5,10 @@
 .contenedor {
   padding-inline: var(--es-espaciado-base);
 
+  .contenedor {
+    margin-inline: calc(var(--es-espaciado-base) * -1);
+  }
+
   // config_contenedor
   @if map.has-key(config_contenedor.$contenedor, 'general') {
     @each $atributo, $valor in map.get(config_contenedor.$contenedor, 'general') {
