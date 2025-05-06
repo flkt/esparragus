@@ -1,0 +1,73 @@
+@use 'sass:map';
+@use '../_configuracion/map_clases' as config_clases;
+@use '../_configuracion/var_adaptable.scss' as config_adaptable;
+@use '../auxiliares/adaptable' as adaptable;
+
+// reticula, contenedor flex de reticula
+.reticula {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--es-espaciado-base);
+
+  // config_clases
+  @if map.has-key(config_clases.$reticula, 'general') {
+    @each $atributo, $valor in map.get(config_clases.$reticula, 'general') {
+      #{$atributo}: #{$valor};
+    }
+  }
+
+  > [class^='columna'],
+  > [class*=' columna'] {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+.contenedor.reticula {
+  padding-inline: 0;
+  gap: 0;
+
+  > [class^='columna'],
+  > [class*=' columna'] {
+    padding-inline: calc(var(--es-espaciado-base) * 1);
+  }
+}
+
+// config_clases para la reticula en cada dispositivo
+@if map.has-key(config_clases.$reticula, 'adaptable') {
+  @each $dispositivo, $atributos in map.get(config.$reticula, 'adaptable') {
+    @include adaptable.desde-dispositivo( #{$dispositivo} ) {
+      .reticula {
+        @each $atributo, $valor in $atributos {
+          #{$atributo}: #{$valor};
+        }
+      }
+    }
+  }
+}
+
+// subclase columna dentro de una reticula
+@if map.has-key(config_clases.$reticula, 'columnas') {
+  @for $i from 1 through map.get(config_clases.$reticula, 'columnas') {
+    .reticula > .columna-#{$i} {
+      flex-basis: calc(calc(($i / map.get(config_clases.$reticula, 'columnas') * 100%)) - var(--es-espaciado-base) + calc($i / map.get(config_clases.$reticula, 'columnas') * var(--es-espaciado-base)) - 1px);
+      max-width: calc(calc(($i / map.get(config_clases.$reticula, 'columnas') * 100%)) - var(--es-espaciado-base) + calc($i / map.get(config_clases.$reticula, 'columnas') * var(--es-espaciado-base)));
+    }
+    .contenedor.reticula > .columna-#{$i} {
+      flex-basis: calc(calc(($i / map.get(config_clases.$reticula, 'columnas') * 100%)) - 1px);
+      max-width: calc(calc(($i / map.get(config_clases.$reticula, 'columnas') * 100%)) );
+    }
+  }
+
+  // subclases de columna especificas para cada dispositivo
+  @each $dispositivo, $tamanio in config_adaptable.$espaciado {
+    @include adaptable.desde-dispositivo( #{$dispositivo} ) {
+      @for $i from 1 through map.get(config_clases.$reticula, 'columnas') {
+        .reticula > .columna-#{$i}-#{$dispositivo} {
+          flex-basis: calc(calc(($i / map.get(config_clases.$reticula, 'columnas') * 100%)) - var(--es-espaciado-base) + calc($i / map.get(config_clases.$reticula, 'columnas') * var(--es-espaciado-base)) - 1px);
+          max-width: calc(calc(($i / map.get(config_clases.$reticula, 'columnas') * 100%)) - var(--es-espaciado-base) + calc($i / map.get(config_clases.$reticula, 'columnas') * var(--es-espaciado-base)));
+        }
+      }
+    }
+  }
+}

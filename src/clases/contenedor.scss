@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../_configuracion/map_clases' as config_contenedor;
+@use '../_configuracion/map_clases' as config_clases;
 @use '../auxiliares/adaptable' as adaptable;
 
 .contenedor {
@@ -9,16 +9,16 @@
     margin-inline: calc(var(--es-espaciado-base) * -1);
   }
 
-  // config_contenedor
-  @if map.has-key(config_contenedor.$contenedor, 'general') {
-    @each $atributo, $valor in map.get(config_contenedor.$contenedor, 'general') {
+  // config_clases
+  @if map.has-key(config_clases.$contenedor, 'general') {
+    @each $atributo, $valor in map.get(config_clases.$contenedor, 'general') {
       #{$atributo}: #{$valor};
     }
   }
 }
 
-// config_contenedor para el contenedor en cada dispositivo
-@if map.has-key(config_contenedor.$contenedor, 'adaptable') {
+// config_clases para el contenedor en cada dispositivo
+@if map.has-key(config_clases.$contenedor, 'adaptable') {
   @each $dispositivo, $atributos in map.get(config.$contenedor, 'adaptable') {
     @include adaptable.desde-dispositivo( #{$dispositivo} ) {
       .contenedor {

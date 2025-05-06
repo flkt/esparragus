@@ -21,7 +21,7 @@
     </p>
     <h3>Ejemplo de uso</h3>
     <p>
-      Nota. para ejemplos de uso se utilizan colores de fondo, pero la clase contenedor no debe
+      Nota. para ejemplos de uso se utilizan colores de fondo, pero la clase .contenedor no debe
       especificar color de fondo.
     </p>
     <pre>

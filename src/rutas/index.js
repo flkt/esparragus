@@ -24,6 +24,16 @@ const rutas = createRouter({
           name: 'Contenedor',
           component: () => import('@/vistas/clases/ContenedorArticle.vue'),
         },
+        {
+          path: 'reticula',
+          name: 'Reticula',
+          component: () => import('@/vistas/clases/ReticulaArticle.vue'),
+        },
+        {
+          path: 'reticula-contenedor',
+          name: 'Reticula Contenedor',
+          component: () => import('@/vistas/clases/ReticulaContenedorArticle.vue'),
+        },
       ]
     },
     {
