@@ -2,7 +2,7 @@
 
 <template>
   <article>
-    <h2>Clase .reticula unida al .contenedor</h2>
+    <h2>Clase .contenedor.reticula</h2>
     <p>
       Cuando se utilizan la clase contenedor y reticula en el mismo elemento,
       se crea una combinacion de ambas clases para formar una reticula con los margenes

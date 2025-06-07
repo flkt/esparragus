@@ -11,8 +11,8 @@ import { RouterLink } from 'vue-router'
     <h2>Estructura</h2>
     <div class="reticula">
       <RouterLink :to="{name: 'Contenedor'}" class="columna-1">Contenedor</RouterLink>
+      <RouterLink :to="{name: 'Contenedor Reticula'}" class="columna-1">Contenedor Reticula</RouterLink>
       <RouterLink :to="{name: 'Reticula'}" class="columna-1">Reticula</RouterLink>
-      <RouterLink :to="{name: 'Reticula Contenedor'}" class="columna-1">Reticula Contenedor</RouterLink>
     </div>
   </div>
 </template>
