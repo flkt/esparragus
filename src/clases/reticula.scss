@@ -29,7 +29,7 @@
 
   > [class^='columna'],
   > [class*=' columna'] {
-    padding-inline: calc(var(--es-espaciado-base) * 1);
+    padding-inline: var(--es-espaciado-base);
   }
 }
 
